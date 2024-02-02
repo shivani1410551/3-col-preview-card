@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap");
+/* font-family: 'Lexend', sans-serif; */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a,
+span,
+button,
+img {
+  display: inline-block;
+}
+body {
+  min-height: 100vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--grey);
+  font-size: 15px;
+  font-family: "Lexend", sans-serif;
+  padding: 1rem;
+}
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --green: hsl(179, 100%, 13%);
+  --transparent: hsla(0, 0%, 100%, 0.75);
+  --grey: hsl(0, 0%, 95%);
+}
+main.card-container {
+  display: flex;
+  max-width: 912px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+main.card-container .card {
+  padding: 2rem;
+  /* max-width: 300px; */
+  width: 100%;
+}
+.card-orange {
+  background-color: var(--orange);
+  border-radius: 10px 0 0 10px;
+}
+.card-orange a {
+  color: var(--orange);
+}
+.card-blue a {
+  color: var(--cyan);
+}
+.card-green a {
+  color: var(--green);
+}
+.card-blue {
+  background-color: var(--cyan);
+}
+.card-green {
+  background-color: var(--green);
+  border-radius: 0 10px 10px 0;
+}
+.card h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--grey);
+  padding-bottom: 1rem;
+  font-size: 1.7rem;
+}
+.card a {
+  text-decoration: none;
+  padding: 10px 16px;
+  background-color: var(--grey);
+  border-radius: 20px;
+  margin-block: auto;
+  transition: all 0.5s ease-in-out;
+}
+.card-orange a:hover {
+  background-color: var(--orange);
+  border: 2px solid var(--grey);
+  color: var(--grey);
+}
+.card-blue a:hover {
+  background-color: var(--cyan);
+  border: 2px solid var(--grey);
+  color: var(--grey);
+}
+.card-green a:hover {
+  background-color: var(--green);
+  border: 2px solid var(--grey);
+  color: var(--grey);
+}
+.card p {
+  color: var(--transparent);
+  line-height: 1.75;
+  padding-bottom: 1rem;
+}
+.card img {
+  padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 375px) {
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card-container .card {
+    width: 100%;
+  }
+  .card-orange {
+    border-radius: 10px 10px 0 0;
+  }
+  .card-green {
+    border-radius: 0 0 10px 10px;
+  }
+}
